@@ -1,0 +1,33 @@
+﻿@model IEnumerable<FinalExam.Models.Item>
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name=" viewport" content="width=device-width" />
+    <title>Final</title>
+</head>
+<body>
+    <div>
+        <h1>This is the Index action of the ItenController</h1>
+    </div>
+    <table>
+        <tr>
+            <th>Description</th>
+            <th>Units On Hand</th>
+            <th>Cost</th>
+            <th>Selling Price</th>
+        </tr>
+
+        @foreach (var i in Model)
+        {
+            <tr>
+                <td>@i.Description</td>
+                <td>@i.UnitsOnHand</td>
+                <td>$@i.Cost</td>
+                <td>$@i.SellingPrice</td>
+            </tr>
+        }
+    </table>
+
+</body>
+</html>
